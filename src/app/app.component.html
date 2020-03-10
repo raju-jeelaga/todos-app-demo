@@ -1,3 +1,39 @@
-<header>This is My Header</header>
+<header class="fixed-top">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="row">
+                  <div class="col-md-12 col-lg-6">
+                      <h3>
+                          <a [routerLink]="['/todos']">TODOS APP</a>
+                      </h3>
+                  </div>
+                  <div class="col-md-12 col-lg-6 top-nav">
+                      <nav>
+                          <ul class="nav nav-pills float-right">
+                              <li class="nav-item">
+                                  <a class="nav-link active" [routerLink]="['/add-edit']">Add Todo </a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link active" [routerLink]="['/add-edit']">T - Add Todo </a>
+                              </li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+<main role="main" class="container">
   <router-outlet></router-outlet>
-<footer>This is my Footer</footer>
+</main>
+
+<footer class="fixed-bottom">
+  <div class="container">
+      <p>Developed with &hearts; on Angular. By <a target="_blank" href="https://twitter.com/raju_jeelaga">@raju_jeelaga</a>. Github <a href="https://github.com/raju-jeelaga/todos-app-demo" target="_blank">Repo</a></p>
+  </div>
+</footer>
+
+
