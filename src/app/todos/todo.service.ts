@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ITodo } from '../interfaces/todo'
+import { ITodo } from '../interfaces/todo';
+import { environment } from '../../environments/environment'
 
 @Injectable()
 export class TodoService {
-  apiurl: string = 'https://todos-api-dev.herokuapp.com';
+  apiurl: string = environment.apiurl
 
   constructor(private http: HttpClient ) { }
 

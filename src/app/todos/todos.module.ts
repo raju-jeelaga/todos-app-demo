@@ -5,8 +5,6 @@ import { AddEditTodoComponent } from './add-edit-todo/add-edit-todo.component';
 import { RouterModule} from '@angular/router';
 import { TodoService } from './todo.service'
 
-
-
 @NgModule({
   declarations: [TodosListComponent, AddEditTodoComponent],
   imports: [
