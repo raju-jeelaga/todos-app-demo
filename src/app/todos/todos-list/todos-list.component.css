@@ -21,7 +21,7 @@
     color: #ffffff;
     padding-left: 0px;
 }
-.compleated {
+.completed {
     text-decoration: line-through;
 }
 .todo-list .list-group-item .align-left {
