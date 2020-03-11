@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { TodoService } from '../todo.service';
+import {ITodo } from '../../interfaces/todo';
+
 @Component({
   selector: 'app-todos-list',
   templateUrl: './todos-list.component.html',
@@ -7,12 +9,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TodosListComponent implements OnInit {
   isLoading:boolean = false;
-  todos: any[] = []
-  constructor(private http: HttpClient ) { }
+  todos: ITodo[] = []
+  constructor(private http:TodoService ) { }
 
   ngOnInit(): void {
     this.isLoading = true;
-    this.http.get('https://todos-api-dev.herokuapp.com/todos').subscribe((data:any[]) =>{
+    this.http.getTodos().subscribe((data:ITodo[]) =>{
       this.isLoading = false;
        this.todos = data;
        console.log("Dada", this.todos);

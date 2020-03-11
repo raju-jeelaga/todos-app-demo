@@ -7,7 +7,7 @@
         <span class="badge badge-primary badge-pill">{{todo.category.name}}</span>
         <span class="badge badge-primary badge-pill">{{todo.targetDate | date}}</span>
         <span><a [routerLink]="['/add-edit']">Edit</a></span>
-        <span class="text-danger delete-btn" (click)="confirmDelete(todo)">Delete</span>
+        <span class="text-danger delete-btn">Delete</span>
     </li>
 </ul>
 <div class="text-center" *ngIf="isLoading">
